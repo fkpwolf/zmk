@@ -44,7 +44,6 @@
 		compatible = "zmk,battery-voltage-divider";
 		label = "BATTERY";
 		io-channels = <&adc 0>;
-		power-gpios = <&gpio0 02 (GPIO_OPEN_DRAIN | GPIO_ACTIVE_LOW)>;
 		output-ohms = <3100000>;
 		full-ohms = <(3100000 + 1090000)>;
 	};
