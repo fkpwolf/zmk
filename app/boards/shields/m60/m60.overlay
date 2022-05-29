@@ -10,6 +10,7 @@
 	chosen {
 		zmk,kscan = &kscan0;
 		zmk,matrix_transform = &default_transform;
+		zmk,battery = &vbatt;
 	};
 
 	kscan0: kscan {
@@ -37,6 +38,11 @@
 			, <&gpio0 25 GPIO_ACTIVE_HIGH>
 			, <&gpio0 26 GPIO_ACTIVE_HIGH>
 			;
+	};
+
+	vbatt: vbatt {
+		compatible = "zmk,battery-nrf-vddh";
+		label = "BATTERY";
 	};
 
 	default_transform: keymap_transform_0 {
